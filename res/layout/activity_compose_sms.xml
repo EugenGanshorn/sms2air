@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/de.crashsource.sms2air"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <com.admob.android.ads.AdView  
+		android:id="@+id/ad" 
+		android:layout_alignParentTop="true"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		app:backgroundColor="#000000"
+		app:primaryTextColor="#FFFFFF"
+		app:secondaryTextColor="#CCCCCC"
+		app:keywords="SMS cost low smstrade" />
+    
+    <LinearLayout android:id="@+id/compose_sms_layout_button"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:layout_weight="2.0"
+		android:orientation="horizontal"
+		android:layout_gravity="bottom"
+		android:background="@android:color/darker_gray"
+		android:padding="5dip"
+		android:layout_marginTop="10dip"
+		android:layout_alignParentBottom="true" >
+		
+		<EditText
+	    	android:id="@+id/compose_body_text"
+	    	android:layout_width="0dip"
+	    	android:layout_height="wrap_content"
+	    	android:hint="@string/compose_body_text_hint" 
+	    	android:gravity="top"
+	    	android:layout_weight="1.0"
+	    	android:maxLines="5"
+	    	android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
+	    	android:imeOptions="flagNoEnterAction"
+	    	android:maxLength="1530"
+	    	android:nextFocusRight="@+id/compose_forward"
+	    	/>
+	    	
+	     <Button android:id="@+id/compose_forward"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent" 
+			android:text="@string/compose_forward" 
+			android:onClick="onClickForward" />
+	
+	</LinearLayout>
+    
+    
+    <LinearLayout
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_weight="1.0"
+		android:layout_above="@id/compose_sms_layout_button"
+		android:layout_below="@id/ad">
+    	
+    	<TextView android:id="@+id/compose_recipients_headline"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:text="@string/compose_recipients_headline"
+    		style="@style/text_headline_middle"/>
+    	
+    	<LinearLayout android="@+id/compose_button_layout"
+    		android:layout_below="@id/compose_recipients_headline"
+    		android:layout_height="wrap_content"
+    		android:layout_width="fill_parent" 
+    		android:orientation="horizontal" >
+	    	
+	    	<Button android:id="@+id/compose_add_contact"
+	    		android:layout_width="0dip"
+	    		android:layout_height="wrap_content"
+	    		android:layout_weight="1.0"
+	    		android:text="@string/compose_add_number"
+	    		android:onClick="onClickAddNumber"
+	    		android:drawableTop="@android:drawable/ic_menu_add"
+	    		style="@style/main_button" />
+	    		
+	    	<Button android:id="@+id/compose_browse_contacts"
+	    		android:layout_width="0dip"
+	    		android:layout_height="wrap_content"
+	    		android:layout_weight="1.0"
+	    		android:text="@string/compose_browse_contacts"
+	    		android:onClick="onClickBrowseContacts"
+	    		android:drawableTop="@drawable/ic_menu_friendslist"
+	    		style="@style/main_button" />
+    		
+    	</LinearLayout>
+    	
+    	<ListView
+    		android:id="@+id/compose_recipient_list"
+			android:layout_height="fill_parent"
+			android:layout_width="fill_parent" />
+	    	
+	</LinearLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/de.crashsource.sms2air"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<Button android:id="@+id/main_compose_sms"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:text="@string/main_compose_sms" 
+	android:onClick="onClickComposeSms" 
+	android:drawableLeft="@drawable/ic_menu_compose" 
+	android:layout_marginTop="10dip"
+	android:layout_alignParentBottom="true"
+	android:layout_weight="2.0" />
+	
+<com.admob.android.ads.AdView  
+	android:id="@+id/ad" 
+	android:layout_alignParentTop="true"
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	app:backgroundColor="#000000"
+	app:primaryTextColor="#FFFFFF"
+	app:secondaryTextColor="#CCCCCC"
+	app:keywords="SMS cost low smstrade" />
+	
+<ListView android:id="@+id/main_drafts"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_weight="1.0"
+	android:layout_above="@id/main_compose_sms"
+	android:layout_below="@id/ad" />
+
+<ScrollView android:id="@+id/main_drafts_alt_scroll"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/ad"
+		android:layout_above="@id/main_compose_sms">
+
+<RelativeLayout android:id="@+id/main_drafts_alt_layout"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" >
+	
+	<WebView android:id="@+id/main_drafts_alt_webview"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+		
+	<Button android:id="@+id/main_drafts_alt_preferences"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/main_no_draft_alt_preferences"
+		android:layout_below="@id/main_drafts_alt_webview"
+		android:visibility="gone"
+		android:layout_centerHorizontal="true"
+		android:layout_margin="10dip"
+		android:onClick="onClickPreferences" />
+	
+</RelativeLayout>
+
+</ScrollView>
+
+</RelativeLayout>

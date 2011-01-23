@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android=
+    "http://schemas.android.com/apk/res/android">
+    
+  <PreferenceCategory
+      android:title="@string/pref_access">
+    <EditTextPreference
+      android:key="gateway_key"
+      android:title="@string/pref_gateway_key"
+      android:defaultValue="" />
+  </PreferenceCategory>
+  
+  <PreferenceCategory
+      android:title="@string/pref_send_methods">
+	  <ListPreference
+		android:key="preferred_route"
+		android:defaultValue="@string/pref_preferred_route_default"
+		android:title="@string/pref_preferred_route"
+		android:entries="@array/routes"
+		android:entryValues="@array/routes_values" />
+      <EditTextPreference
+      	android:key="preferred_sender"
+      	android:defaultValue=""
+      	android:title="@string/pref_preferred_sender" />
+  </PreferenceCategory>
+  
+  <PreferenceCategory
+  	android:title="@string/pref_behavior">
+  		
+  	<CheckBoxPreference
+  		android:key="update_credit_status"
+  		android:title="@string/pref_update_credit_status"
+  		android:summary="@string/pref_update_credit_status_summary"
+  		android:defaultValue="true" />
+  		
+  	<de.crashsource.sms2air.gui.components.CheckBoxPreferenceWithLongSummary
+  		android:key="delivery_report"
+  		android:title="@string/pref_preferred_delivery_report"
+  		android:summary="@string/pref_preferred_delivery_report_summary"
+  		android:defaultValue="false" />
+  
+  </PreferenceCategory>
+  
+  <PreferenceCategory
+  	android:title="@string/pref_debugging">
+  	
+  	<CheckBoxPreference
+  		android:key="debug_mode"
+  		android:title="@string/pref_debug_mode"
+  		android:summary="@string/pref_debug_summary"
+  		android:defaultValue="false" />
+  	
+  </PreferenceCategory>
+        
+</PreferenceScreen>

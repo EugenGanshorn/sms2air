@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string-array name="routes">
+      <item>Basic</item>
+      <item>Economy</item>
+      <item>Gold</item>
+      <item>Direct</item>
+  </string-array>
+  
+  <string-array name="routes_values">
+      <item>basic</item>
+      <item>economy</item>
+      <item>gold</item>
+      <item>direct</item>
+  </string-array>
+  
+  <string-array name="smstrade_return_codes">
+      <item>Empfängernummer ist nicht korrekt.</item>
+      <item>Absenderadresse ist nicht korrekt.</item>
+      <item>Nachrichtentext ist nicht korrekt.</item>
+      <item>Nachrichtentyp ist nicht korrekt.</item>
+      <item>Route der SMS ist nicht korrekt.</item>
+      <item>Identifikation fehlgeschlagen.</item>
+      <item>Nicht genügend Guthaben vorhanden.</item>
+      <item>Netzwerk wird nicht abgedeckt.</item>
+      <item>Feature nicht möglich.</item>
+      <item>Weiterleitung an SMS-C fehlgeschlagen.</item>
+      <item>SMS wurde akzeptiert und versendet.</item>
+  </string-array>
+  
+</resources>

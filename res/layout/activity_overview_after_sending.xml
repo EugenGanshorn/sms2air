@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+	<Button android:id="@+id/overview_close"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:text="@string/overview_close" 
+		android:onClick="onClickClose"
+		android:drawableLeft="@android:drawable/ic_menu_revert"
+		android:layout_alignParentBottom="true"
+		android:layout_weight="2.0"
+		android:layout_marginTop="10dip" />
+
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="0dip"
+		android:orientation="vertical"
+		android:layout_weight="1.0"
+		android:layout_alignParentTop="true"
+		android:layout_above="@id/overview_close">
+		
+		<RelativeLayout android:id="@+id/overview_notice_layout"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:visibility="gone"
+			android:background="#ffff0000"
+			android:padding="5dip"
+			android:layout_marginBottom="5dip">
+			
+			<ImageView android:id="@+id/overview_notice_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true" />
+				
+			<TextView android:id="@+id/overview_notice_text"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/overview_notice_icon"
+				android:layout_alignParentTop="true"
+				android:text="placeholder"
+				android:textColor="#ffffffff" />
+			
+		</RelativeLayout>
+		
+		<ListView android:id="@+id/overview_list" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" />
+		
+	</LinearLayout>
+			
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  
+  <ScrollView 
+  	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent">
+  	
+  	<LinearLayout
+  		android:layout_height="fill_parent"
+  		android:layout_width="fill_parent"
+  		android:orientation="vertical">
+  		
+  		<RelativeLayout 
+  			android:layout_height="wrap_content"
+  			android:layout_width="fill_parent"
+  			android:layout_marginBottom="8dip">
+  			
+  			<ImageView android:id="@+id/history_single_date_icon"
+	  			android:layout_height="wrap_content"
+	  			android:layout_width="wrap_content" 
+	  			android:src="@android:drawable/ic_menu_today" />
+	  			
+	  		<TextView android:id="@+id/history_single_date_headline"
+	  			android:layout_height="wrap_content"
+	  			android:layout_width="fill_parent"
+	  			android:text="@string/history_single_date_headline"
+	  			android:layout_toRightOf="@id/history_single_date_icon"
+	  			android:layout_alignParentTop="true" />
+	  			
+	  		<TextView android:id="@+id/history_single_date"
+	  			android:layout_height="wrap_content"
+	  			android:layout_width="fill_parent"
+	  			android:layout_toRightOf="@id/history_single_date_icon"
+	  			android:layout_alignParentBottom="true"
+	  			android:layout_below="@id/history_single_date_headline"
+	  			android:textColor="@color/light_text" />
+  			
+  		</RelativeLayout>
+  		
+  		<RelativeLayout 
+  			android:layout_height="wrap_content"
+  			android:layout_width="fill_parent"
+  			android:layout_marginBottom="8dip">
+  			
+  			<ImageView android:id="@+id/history_single_recipients_icon"
+	  			android:layout_height="wrap_content"
+	  			android:layout_width="wrap_content" 
+	  			android:src="@drawable/ic_menu_friendslist" />
+	  			
+	  		<TextView android:id="@+id/history_single_recipients_headline"
+	  			android:layout_height="wrap_content"
+	  			android:layout_width="fill_parent"
+	  			android:text="@string/history_single_recipients_headline"
+	  			android:layout_toRightOf="@id/history_single_recipients_icon"
+	  			android:layout_alignParentTop="true" />
+	  			
+	  		<TextView android:id="@+id/history_single_recipients"
+	  			android:layout_height="wrap_content"
+	  			android:layout_width="fill_parent"
+	  			android:layout_toRightOf="@id/history_single_recipients_icon"
+	  			android:layout_alignParentBottom="true"
+	  			android:layout_below="@id/history_single_recipients_headline"
+	  			android:textColor="@color/light_text" />
+  			
+  		</RelativeLayout>
+  		
+  		<RelativeLayout 
+  			android:layout_height="wrap_content"
+  			android:layout_width="fill_parent"
+  			android:layout_marginBottom="8dip">
+  			
+  			<ImageView android:id="@+id/history_single_body_text_icon"
+	  			android:layout_height="wrap_content"
+	  			android:layout_width="wrap_content" 
+	  			android:src="@android:drawable/ic_menu_edit" />
+	  			
+	  		<TextView android:id="@+id/history_single_body_text_headline"
+	  			android:layout_height="wrap_content"
+	  			android:layout_width="fill_parent"
+	  			android:text="@string/history_single_body_text_headline"
+	  			android:layout_toRightOf="@id/history_single_body_text_icon"
+	  			android:layout_alignParentTop="true" />	  			
+	  			
+	  		<TextView android:id="@+id/history_single_body_text"
+	  			android:layout_height="wrap_content"
+	  			android:layout_width="fill_parent"
+	  			android:layout_toRightOf="@id/history_single_body_text_icon"
+	  			android:layout_alignParentBottom="true"
+	  			android:layout_below="@id/history_single_body_text_headline"
+	  			android:textColor="@color/light_text" />
+	  			
+  		</RelativeLayout>
+  			
+  		
+  	</LinearLayout>	
+  	
+  </ScrollView>
+  
+  
+</FrameLayout>

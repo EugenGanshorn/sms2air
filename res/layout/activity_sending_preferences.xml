@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/de.crashsource.sms2air"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+	
+	 <com.admob.android.ads.AdView  
+		android:id="@+id/ad" 
+		android:layout_alignParentTop="true"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		app:backgroundColor="#000000"
+		app:primaryTextColor="#FFFFFF"
+		app:secondaryTextColor="#CCCCCC"
+		app:keywords="SMS cost low smstrade" />
+	
+	<Button android:id="@+id/send_pref_forward"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:text="@string/send_pref_send" 
+			android:onClick="onClickSend"
+			android:drawableLeft="@android:drawable/ic_menu_send"
+			android:layout_alignParentBottom="true" />
+	
+	<ListView android:id="@+id/send_pref_list"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@id/ad" 
+		android:layout_above="@id/send_pref_forward" />
+
+	
+			
+</RelativeLayout>

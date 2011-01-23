@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="error_list_item">#ffd75938</color>
+	<color name="success_list_item">#ff4fa70e</color>
+	<color name="light_text">#ffffffff</color>
+</resources>

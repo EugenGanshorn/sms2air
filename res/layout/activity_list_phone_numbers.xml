@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <TextView android:id="@+id/list_phone_numbers_headline"
+    	android:layout_height="wrap_content"
+    	android:layout_width="fill_parent"
+    	style="@style/text_headline_middle" />
+    	
+   	<ImageView android:id="@+id/list_phone_numbers_icon"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:background="@android:drawable/ic_menu_help"
+    	android:layout_alignParentLeft="true"
+    	android:layout_below="@id/list_phone_numbers_headline" />
+    	
+    <TextView android:id="@+id/list_phone_numbers_description"
+    	android:layout_height="wrap_content"
+    	android:layout_width="fill_parent"
+    	android:text="@string/list_numbers_description"
+    	android:textSize="15sp"
+    	android:layout_toRightOf="@id/list_phone_numbers_icon"
+    	android:layout_below="@id/list_phone_numbers_headline" />
+    
+    <ListView android:id="@+id/list_phone_numbers_list"
+    	android:layout_height="fill_parent"
+    	android:layout_width="fill_parent"
+    	android:layout_below="@id/list_phone_numbers_description"
+    	android:layout_alignParentLeft="true"/>
+    
+</RelativeLayout>

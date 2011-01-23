@@ -1,0 +1,24 @@
+html {
+	font-size: 0.85em;
+}
+
+body {
+	color: white;
+}
+
+ul {
+	padding-left: 1em;
+}
+
+ul li {
+	margin: 0 1em 0.5em 0;
+}
+
+a {
+	color: #87aade;
+}
+
+span.highlight {
+	color: #f56c00;
+	font-weight: bold;
+}

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- HTML Sites -->
+	<string name="html_first_use">first_use_de</string>
+	<string name="html_no_drafts">no_drafts_de</string>
+
+    <string name="app_name">sms2air</string>
+    <string name="main_compose_sms">neue SMS schreiben</string>
+    <string name="main_preferences">Einstellungen</string>
+    <string name="main_hint_deleted_draft">Der Entwurf wurde gelöscht.</string>
+    <string name="main_hint_some_more">und %d weitere</string>
+    <string name="main_no_recipient">kein Empfänger</string>
+    <string name="main_credit_status">%s Euro</string>
+    <string name="main_error_update_credit_status">Ihr Guthaben konnte nicht abgefragt werden.\nBitte überprüfen Sie Ihren Gateway-Key</string>
+    <string name="main_no_draft_alt_preferences">Einstellungen tätigen</string>
+    <string name="main_error_empty_history">Der Verlauf ist leer.</string>
+    
+    <!-- Menu -->
+    <string name="men_preferences">Einstellungen</string>
+    <string name="men_history">Verlauf</string>
+    <string name="men_help">Hilfe</string>
+    <string name="men_exit">Beenden</string>
+    <string name="men_clear_history">Leeren</string>
+    <string name="men_delete_history_single">Lösche diesen Eintrag</string>
+    
+    <!-- Context Menu -->
+    <string name="con_draft_title">Aktionen</string>
+    <string name="con_draft_delete">Entwurf löschen</string>
+    <string name="con_history_title">Aktionen</string>
+    <string name="con_history_delete">Eintrag löschen</string>
+    
+    <!-- Preferences -->
+    <string name="pref_access">Zugang</string>
+    <string name="pref_gateway_key">Gateway-Key</string>
+    <string name="pref_gateway_key_summary">Tagen Sie Ihren persönlichen Gateway-Key ein</string>
+    <string name="pref_send_methods">Versandmethoden</string>
+    <string name="pref_preferred_route">Bevorzugte Route</string>
+    <string name="pref_preferred_route_summary">Wählen Sie Ihre bevorzugte Route</string>
+    <string name="pref_preferred_route_default">basic</string>
+    <string name="pref_preferred_sender">Bevorzugter Absender</string>
+    <string name="pref_preferred_sender_summary">Geben Sie Ihre bevorzugte Absenderadresse an (optional)</string>
+    <string name="pref_behavior">App-Verhalten</string>
+    <string name="pref_update_credit_status">Guthaben aktualisieren</string>
+    <string name="pref_update_credit_status_summary">Guthaben aktualisieren und auf der Startseite anzeigen.</string>
+    <string name="pref_debugging">Debug</string>
+    <string name="pref_debug_mode">Debug Modus</string>
+    <string name="pref_debug_summary">Nur für Testzwecke. Die SMS wird nicht verschickt, es wird nur so getan.</string>
+    <string name="pref_error_invalid_gateway_key">Der Gateway-Key scheint nicht korrekt zu sein. Bitte überprüfen Sie diesen nochmals.</string>
+    <string name="pref_hint_no_check_gateway_key">Der Gateway-Key kann nicht auf seine Korrektheit überprüft werden, weil kein Zugang zum Internet besteht.</string>
+    <string name="pref_success_edit_gateway_key">Der eingegebene Gateway-Key ist korrekt.</string>
+    <string name="pref_preferred_delivery_report">Empfangsbestätigung</string>
+    <string name="pref_preferred_delivery_report_summary">Soll eine Versandbestätigung verschickt werden?\nBenötigt eine Aktivierung auf smstrade.de -> Schnittstellen -> Einstellungen -> Zustellberichte -> per Mail zusenden.</string>
+    
+    <!-- Compose Sms -->
+    <string name="compose_receiver_hint">An</string>
+    <string name="compose_body_text_hint">Ihre Nachricht ...</string>
+    <string name="compose_browse_contacts">füge Kontakt hinzu</string>
+    <string name="compose_add_number">füge Nummer hinzu</string>
+    <string name="compose_forward">weiter</string>
+    <string name="compose_error_fill">Sie müssen mindestens einen Empfänger und eine Nachricht angeben.</string>
+    <string name="compose_hint_created_draft">Nachricht als Entwurf gespeichert.</string>
+    <string name="compose_hint_updated_draft">Der Entwurf wurde aktualisiert.</string>
+    <string name="compose_recipients_headline">An die folgenden Empfänger verschicken:</string>
+    <string name="compose_unknown_contact">Unbekannter Kontakt</string>
+    <string name="compose_contact_has_no_numbers">Entschuldige, der Kontakt %s hat keine Nummer, die hinzugefügt werden könnte.</string>
+    
+    <!-- List Phone Numbers -->
+    <string name="list_numbers_description">Es gibt verschiedene Telefonnummern für %s.\n\nBitte wählen Sie die gewünschte Nummer aus.</string>
+    
+    <!-- Sending Preferences -->
+    <string name="send_pref_sender">benutze eigenen Absender</string>
+    <string name="send_pref_route_title">Route wählen</string>
+    <string name="send_pref_sender_hint">Ihre Abesenderaddresse ...</string>
+    <string name="send_pref_send">los geht\'s ... verschicken!</string>
+    <string name="send_pref_progress_sending_title">Bitte warten ...</string>
+    <string name="send_pref_progress_sending_body">Die SMS wird dem Provider übermittelt.</string>
+    <string name="send_pref_error_no_network_access">Ihr Telefon verfügt momentan nicht über Zugang zum Internet.\nBitte verbinden Sie es und versuchen Sie es erneut.</string>
+    <string name="send_pref_route_headline">Route</string>
+    <string name="send_pref_custom_sender_adress">Eigene Absenderadresse</string>
+    <string name="send_pref_send_delayed">Zeitverzögerung</string>
+    <string name="send_pref_no_delay_set">keine Verzögerung aktiviert</string>
+    <string name="send_pref_no_sender_address">kein Absender angegeben</string>
+    <string name="send_pref_sender_address_not_allowed">bei dieser Route nicht möglich</string>
+    <string name="send_pref_error_route_does_not_allow_unicode_text">Sie benutzen einige Zeichen die in dieser Route nicht erlaubt sind. Bitte wählen Sie eine andere Route, z.B. die Gold Route.</string>
+    
+    
+    <!-- Overview After Sending -->
+    <string name="overview_error_internal">Es trat ein interner Fehler auf.\nBitte versuchen Sie es erneut.</string>
+    <string name="overview_error_undefined">Ein unbekannter Fehler trat auf.\nBitte informieren Sie den Anbieter dieser App.\nERROR CODE:</string>
+    <string name="overview_close">schließen &amp; und zurück</string>
+    <string name="overview_warning_debug_mode_on">Wegen der Debug-Einstellungen wurde die SMS nicht wirklich verschickt. Sollten Sie die SMS tatsächlich verschicken wollen, dann ändern Sie bitte die Debug-Einstellungen.</string>
+    
+    <!-- History Overview -->
+    <string name="history_title">Verlauf</string>
+    <string name="history_database_cleared">Der Verlauf wurde geleert.</string>
+    <string name="history_description">Hier können Sie in der Vergangenheit versendete SMS einsehen. Klicken Sie auf einen Eintrag um detailiertere Informationen zu erhalten.</string>
+    <string name="history_deleted_record">Der Eintrag wurde gelöscht.</string>
+    
+    <!-- History Single -->
+    <string name="history_single_recipients_headline">Die SMS wurde an folgende Empfänger zugestellt:</string>
+    <string name="history_single_date_headline">Die SMS wurde dem Gateway übergeben am:</string>
+    <string name="history_single_body_text_headline">Sie haben folgenden Text geschrieben:</string>
+    <string name="history_single_record_deleted">Der Eintrag wurde gelöscht.</string>
+    
+    <!-- Dialog -->
+    <string name="add_recipient_title">Füge andere Nummer hinzu</string>
+    <string name="add_recipient_description">Bitte geben Sie die Telefonnummer ein.</string>
+    <string name="add_recipient_hint_phone_number">Telefonnummer ...</string>
+    <string name="add_recipient_confirm">OK</string>
+    <string name="add_recipient_cancel">abbrechen</string>
+    
+    <string name="set_sender_address_title">Absendernummer wählen</string>
+    <string name="set_sender_address_description">Bitte wählen Sie eine Absenderadresse.\n\nBeachten Sie: Diese Nummer muss nicht Ihre eigene Nummer sein. Sie können ebenfalls einen Text verwenden.\n\nLimit: 11 Zeichen oder 16 Ziffern.</string>
+    <string name="set_sender_address_hint">Telefonnummer / Text ...</string>
+    <string name="set_sender_address_confirm">OK</string>
+    <string name="set_sender_address_cancel">abbrechen</string>
+    
+    <string name="set_delay_title">SMS zeiversetzt verschicken</string>
+    <string name="set_delay_description">Bitte wählen Sie ein Datum und eine Uhrzeit an der die SMS verschickt werden soll.</string>
+    <string name="set_delay_error_time_in_past">Das von Ihnen gewählte Datum liegt in der Vergangenheit. Die Eingabe wurde daher verworfen.</string>
+    <string name="set_delay_confirm">OK</string>
+    <string name="set_delay_cancel">abbrechen</string>
+    
+    <string name="save_draft_title">Als Entwurf speichern?</string>
+    <string name="save_draft_description">Wollen Sie diese Nachricht als Entwurf speichern?</string>
+    <string name="save_draft_confirm">Ja</string>
+    <string name="save_draft_cancel">Nein</string>
+    
+    <!-- Other -->
+    <string name="phone_type_home">Zuhause</string>
+    <string name="phone_type_mobile">Mobil</string>
+    <string name="phone_type_work">Arbeit</string>
+    <string name="phone_type_other">Anderes</string>
+    
+    <string name="type_draft">Entwurf</string>
+    <string name="type_sent">Gesendet</string>
+    <string name="type_received">Empfangen</string>
+    
+    <!-- Temporary -->
+    <string name="temp_help_not_supported">Die Hilfe wird derzeit noch nicht unterstützt.</string>
+</resources>
