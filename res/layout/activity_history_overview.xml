@@ -5,27 +5,17 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res/de.crashsource.sms2air">
         
-        <com.admob.android.ads.AdView  
-			android:id="@+id/ad" 
-			android:layout_alignParentTop="true"
-			android:layout_width="fill_parent" 
-			android:layout_height="wrap_content"
-			app:backgroundColor="#000000"
-			app:primaryTextColor="#FFFFFF"
-			app:secondaryTextColor="#CCCCCC"
-			app:keywords="SMS cost low smstrade" />
-        
         <ImageView android:id="@+id/history_description_icon"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
         	android:src="@android:drawable/ic_menu_help"
-        	android:layout_below="@id/ad" />
+        	android:layout_alignParentTop="true" />
         
         <TextView android:id="@+id/history_description"
         	android:text="@string/history_description"
         	android:layout_width="fill_parent"
         	android:layout_height="wrap_content"
-        	android:layout_below="@id/ad"
+        	android:layout_alignParentTop="true"
         	android:layout_toRightOf="@id/history_description_icon"
         	android:layout_marginBottom="5dip" />
         

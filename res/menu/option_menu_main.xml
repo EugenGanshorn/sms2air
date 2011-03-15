@@ -15,6 +15,11 @@
     android:icon="@android:drawable/ic_menu_help"
   /> -->
   <item
+    android:id="@+id/opt_info"
+    android:title="@string/men_info"
+    android:icon="@android:drawable/ic_menu_info_details"
+  />
+  <item
     android:id="@+id/opt_exit"
     android:title="@string/men_exit"
     android:icon="@android:drawable/ic_menu_close_clear_cancel"

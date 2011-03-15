@@ -26,9 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
-
-import com.admob.android.ads.AdManager;
-
 import de.crashsource.sms2air.R;
 import de.crashsource.sms2air.adapter.DraftAdapter;
 import de.crashsource.sms2air.common.AndroidBase;
@@ -98,11 +95,6 @@ public class ActivityMainScreen extends Activity {
 			mTitlebarRight = (TextView) findViewById(R.id.titlebar_right);
 			mTitlebarLeft.setText(R.string.app_name);
 		}
-
-		// ADMOB
-		AdManager.setTestDevices(new String[] { AdManager.TEST_EMULATOR,
-				"F94C2DBF2408588A7AAAC200CC8E3D9A" // HTC Desire
-		});
 
 		mComposeSms = (Button) findViewById(R.id.main_compose_sms);
 		mDrafts = (ListView) findViewById(R.id.main_drafts);
@@ -268,6 +260,11 @@ public class ActivityMainScreen extends Activity {
 		case R.id.opt_exit:
 			Log.v(TAG, "opt_exit selected");
 			finish();
+			return true;
+		case R.id.opt_info:
+			Log.v(TAG, "opt_info selected");
+			intent = new Intent(this, ActivityInformation.class);
+			startActivity(intent);
 			return true;
 //		case R.id.opt_help:
 //			Log.v(TAG, "help selected");

@@ -14,27 +14,17 @@
 	android:layout_alignParentBottom="true"
 	android:layout_weight="2.0" />
 	
-<com.admob.android.ads.AdView  
-	android:id="@+id/ad" 
-	android:layout_alignParentTop="true"
-	android:layout_width="fill_parent" 
-	android:layout_height="wrap_content"
-	app:backgroundColor="#000000"
-	app:primaryTextColor="#FFFFFF"
-	app:secondaryTextColor="#CCCCCC"
-	app:keywords="SMS cost low smstrade" />
-	
 <ListView android:id="@+id/main_drafts"
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:layout_weight="1.0"
 	android:layout_above="@id/main_compose_sms"
-	android:layout_below="@id/ad" />
+	android:layout_alignParentTop="true" />
 
 <ScrollView android:id="@+id/main_drafts_alt_scroll"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@id/ad"
+		android:layout_alignParentTop="true"
 		android:layout_above="@id/main_compose_sms">
 
 <RelativeLayout android:id="@+id/main_drafts_alt_layout"
