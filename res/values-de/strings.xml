@@ -3,6 +3,7 @@
 	<!-- HTML Sites -->
 	<string name="html_first_use">first_use_de</string>
 	<string name="html_no_drafts">no_drafts_de</string>
+	<string name="html_information">information_en</string>
 
     <string name="app_name">sms2air</string>
     <string name="main_compose_sms">neue SMS schreiben</string>
@@ -19,6 +20,7 @@
     <string name="men_preferences">Einstellungen</string>
     <string name="men_history">Verlauf</string>
     <string name="men_help">Hilfe</string>
+    <string name="men_info">Info</string>
     <string name="men_exit">Beenden</string>
     <string name="men_clear_history">Leeren</string>
     <string name="men_delete_history_single">Lösche diesen Eintrag</string>

@@ -142,18 +142,29 @@ public class ActivityComposeSms extends Activity {
 		/*
 		 * This happens if the activity is started via intent
 		 */
-		else if (getIntent().getData() != null
-				&& getIntent().getData().toString().startsWith("smsto:")) {
-			String phoneNumber = getIntent().getData().toString().substring(
-					"smsto:".length());
-			Recipient r = AndroidBase.getRecipientByPhoneNumber(this,
-					phoneNumber);
-			if (r != null) {
-				mRecipientList.add(r);
-				mRecipientAdapter = new RecipientAdapter(this,
-						R.layout.item_compose_recipient, mRecipientList);
-				mRecipientListView.setAdapter(mRecipientAdapter);
+		else if (getIntent().getData() != null) {
+			if (getIntent().getData().toString().startsWith("sms")) {
+				String phoneNumber;
+				if(getIntent().getData().toString().startsWith("smsto:")) {
+					phoneNumber = getIntent().getData().toString().substring(
+						"smsto:".length());
+				} else {
+					phoneNumber = getIntent().getData().toString().substring(
+						"sms:".length());
+				}
+				if (phoneNumber.startsWith("%2B")) {
+					phoneNumber = "+" + phoneNumber.substring(3);
+				}
+				Recipient r = AndroidBase.getRecipientByPhoneNumber(this,
+						phoneNumber);
+				if (r != null) {
+					mRecipientList.add(r);
+					mRecipientAdapter = new RecipientAdapter(this,
+							R.layout.item_compose_recipient, mRecipientList);
+					mRecipientListView.setAdapter(mRecipientAdapter);
+				}	
 			}
+			
 		}
 
 		mIsDirty = false; // no changes yet

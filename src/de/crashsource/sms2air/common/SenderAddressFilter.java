@@ -26,7 +26,7 @@ public class SenderAddressFilter implements InputFilter {
 		if (dest.length() < maxLengthAlphaNumberic) {
 			return null; // let it pass
 		} else if (dest.length() < maxLengthNumeric) {
-			String sourceStr = (String) source;
+			String sourceStr = source.toString();
 			if (untilNow.matches("[0-9]+") && sourceStr.matches("[0-9]+")) {
 				return null; // let it pass
 			} else {
