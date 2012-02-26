@@ -138,6 +138,8 @@
     <string name="type_sent">Gesendet</string>
     <string name="type_received">Empfangen</string>
     
+    <string name="unknown">Unbekannt</string>
+    
     <!-- Temporary -->
     <string name="temp_help_not_supported">Die Hilfe wird derzeit noch nicht unterstützt.</string>
 </resources>

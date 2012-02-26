@@ -137,6 +137,8 @@
     <string name="type_sent">Sent</string>
     <string name="type_received">Received</string>
     
+    <string name="unknown">Unknown</string>
+    
     <!-- Temporary -->
     <string name="temp_help_not_supported">Help function is currently not supported.</string>
 </resources>

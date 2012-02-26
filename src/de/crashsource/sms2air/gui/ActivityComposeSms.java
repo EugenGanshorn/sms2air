@@ -152,21 +152,30 @@ public class ActivityComposeSms extends Activity {
 					phoneNumber = getIntent().getData().toString().substring(
 						"sms:".length());
 				}
-				if (phoneNumber.startsWith("%2B")) {
-					phoneNumber = "+" + phoneNumber.substring(3);
-				}
-				Recipient r = AndroidBase.getRecipientByPhoneNumber(this,
-						phoneNumber);
-				if (r != null) {
+				if (phoneNumber.length() != 0) {
+					Log.v(TAG, "onCreate(): phoneNumber: " + phoneNumber);
+					if (phoneNumber.startsWith("%2B")) {
+						phoneNumber = "+" + phoneNumber.substring(3);
+					}
+					
+					Recipient r = AndroidBase.getRecipientByPhoneNumber(this,
+							phoneNumber);
+					if (r == null) { // if recipient is unknown, create a temporary new one
+						r = new Recipient("", getResources().getString(R.string.compose_unknown_contact), phoneNumber, -1, Recipient.NO_RETURN_CODE);
+					}
 					mRecipientList.add(r);
 					mRecipientAdapter = new RecipientAdapter(this,
 							R.layout.item_compose_recipient, mRecipientList);
 					mRecipientListView.setAdapter(mRecipientAdapter);
-				}	
+				}
+				
+				String message = getIntent().getExtras().getString("sms_body");
+				if (message.length() != 0) {
+					Log.v(TAG, "onCreate(): message: " + message);
+					mBodyText.setText(message);
+				}
 			}
-			
 		}
-
 		mIsDirty = false; // no changes yet
 	}
 
