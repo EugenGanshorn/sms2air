@@ -169,10 +169,12 @@ public class ActivityComposeSms extends Activity {
 					mRecipientListView.setAdapter(mRecipientAdapter);
 				}
 				
-				String message = getIntent().getExtras().getString("sms_body");
-				if (message.length() != 0) {
-					Log.v(TAG, "onCreate(): message: " + message);
-					mBodyText.setText(message);
+				if (getIntent().getExtras() != null) {
+					String message = getIntent().getExtras().getString("sms_body");
+					if (message.length() != 0) {
+						Log.v(TAG, "onCreate(): message: " + message);
+						mBodyText.setText(message);
+					}
 				}
 			}
 		}
@@ -269,9 +271,9 @@ public class ActivityComposeSms extends Activity {
 	}
 
 	public void onClickBrowseContacts(View v) {
-		Intent i = new Intent(Intent.ACTION_PICK);
-		i.setType(ContactsContract.Contacts.CONTENT_TYPE);
-		startActivityForResult(i, PICK_CONTACT);
+		Intent intent = new Intent(Intent.ACTION_PICK, 
+				ContactsContract.Contacts.CONTENT_URI);
+		startActivityForResult(intent, PICK_CONTACT);
 	}
 
 	public void onClickAddNumber(View v) {
@@ -343,7 +345,9 @@ public class ActivityComposeSms extends Activity {
 							.getString(c
 									.getColumnIndexOrThrow(ContactsContract.Contacts.LOOKUP_KEY));
 				} finally {
-					c.close();
+					// Closing the cursor resumes in an error in Android 4.0
+					// Therefore it will be closed at the very end
+					//c.close();
 				}
 
 				Log.v(TAG, "onActivityResult(): picked contact: " + name
@@ -403,6 +407,8 @@ public class ActivityComposeSms extends Activity {
 							.show();
 					return; // there is no number set
 				}
+				// cursor needs to be closed at the end because of Android 4.0
+				c.close();
 			}
 			break;
 
