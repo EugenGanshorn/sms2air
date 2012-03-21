@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="de.crashsource.sms2air" android:versionCode="8"
-	android:versionName="1.4.3" android:installLocation="preferExternal">
+	package="de.crashsource.sms2air" android:versionCode="9"
+	android:versionName="1.4.4" android:installLocation="preferExternal">
 	<application android:icon="@drawable/sms2air_icon_72"
 		android:label="@string/app_name" android:debuggable="false">
 		<activity android:name=".gui.ActivityMainScreen"

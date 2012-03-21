@@ -71,23 +71,25 @@ public class AndroidBase {
 	    Uri res = ContactsContract.Contacts.lookupContact(context.getContentResolver(), lookupUri);
 	    //String id = res.getLastPathSegment();
 	    
-		Cursor c = context.getContentResolver().query(
-				res, 
-				new String[] { ContactsContract.Contacts.DISPLAY_NAME }, 
-				null, 
-				null, 
-				null
-			);
 		try {
+			Cursor c = context.getContentResolver().query(
+					res, 
+					new String[] { ContactsContract.Contacts.DISPLAY_NAME }, 
+					null, 
+					null, 
+					null
+				);
 			c.moveToFirst();
 			String name = c.getString(0);
+			c.close();
 			return new Person(lookupKey, name);
 		}
 		catch(IndexOutOfBoundsException e) {
 			Log.e(TAG, e.getMessage());
 			return null;
-		} finally {
-			c.close();
+		}
+		catch(NullPointerException e) {
+			return null;
 		}
 	}
 }
